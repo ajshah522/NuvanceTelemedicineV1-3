@@ -21,6 +21,13 @@
             screen_share
         </i>
     </button>
+    <button type="button" class="btn btn-default" v-on:click="toggleChat">
+        <i v-if="isChat"  class="material-icons">
+            stop_Chat
+        </i>
+        <i v-else class="material-icons">
+            Chat
+        </i>
   </div>
 </template>
 
@@ -33,7 +40,8 @@ export default {
     isScreensharing: Boolean,
     toggleAudio: Function,
     toggleVideo: Function,
-    toggleScreensharing: Function
+    toggleScreensharing: Function,
+    toggleChat:Function
   },
   mounted(){
       //fa-microphone-slash
